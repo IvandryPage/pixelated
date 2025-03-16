@@ -39,3 +39,12 @@
 - Raw pointer isn't safe
 - Array holds the address of the first character
   - So, to access the second element we should do \*(array + 1)
+
+### 🚀 Dynamic Memory Alloction
+
+- There's two memory: stack and heap
+- Heap has more space for memory allocation, but it quite complex
+- Stack is the default memory allocation
+- Using heap we can control when a memory dies
+  - but this come with a catch, if we forget to kill it,
+  - we ends up with garbage memory that can't be allocated or controlled by programmer
