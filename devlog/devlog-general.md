@@ -32,3 +32,10 @@
 - I can create table using std::setw and std::iosflags : left, right, internal
 - Display its Dec, Hex, Oct form, decimal number after point, etc
 - it's hard to track the last used flags etc, cause it works like an on/off switch rather than hold button
+
+### 🚀 Pointer
+
+- Pointer holds the address of another variable
+- Raw pointer isn't safe
+- Array holds the address of the first character
+  - So, to access the second element we should do \*(array + 1)
