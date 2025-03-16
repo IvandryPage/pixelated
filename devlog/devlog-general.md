@@ -48,3 +48,11 @@
 - Using heap we can control when a memory dies
   - but this come with a catch, if we forget to kill it,
   - we ends up with garbage memory that can't be allocated or controlled by programmer
+
+### 🚀 Dynamic Memory Alloction and Handles it
+
+- We can create as much as memory needed as long we handle it properly
+- Every time we delete a pointer we should assing the pointer into nullptr too
+  - this would make our easier because we don't want some unexpected behaviour
+- We maybe failed allocating a memory so std::nothrow comes in handy to catch this failed allocation
+  - the allocated data becomes nullptr if it fails
