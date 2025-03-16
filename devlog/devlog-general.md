@@ -25,3 +25,10 @@
 - confused about how strcmp works:
   - strcmp compares 2 const char \*
   - if same, it returns 0, else return non-zero based on which one is greater
+
+### 🚀 Outputted Format
+
+- Using library iomanip and ios, I can format our output as I needs
+- I can create table using std::setw and std::iosflags : left, right, internal
+- Display its Dec, Hex, Oct form, decimal number after point, etc
+- it's hard to track the last used flags etc, cause it works like an on/off switch rather than hold button
