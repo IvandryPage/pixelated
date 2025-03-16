@@ -56,3 +56,14 @@
   - this would make our easier because we don't want some unexpected behaviour
 - We maybe failed allocating a memory so std::nothrow comes in handy to catch this failed allocation
   - the allocated data becomes nullptr if it fails
+
+### 🚀 Character Manipulation
+
+- There are so many things we can do in cstring lib
+  - check is alphabetic using std::isalpha
+  - check is alphanumeric using std::isalphanum
+  - we can make it lowercase or uppercase by std::tolower or std::toupper
+  - we can check is it blank string by using std:: std::isblank
+  - etc
+- By using strrchr, we can find the first occurence of character in a string
+- All of this would be handy when it combine to something like std::transform, etc
