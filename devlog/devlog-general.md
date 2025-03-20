@@ -103,4 +103,5 @@
   3. Unique elements => set and unordered-set
 - Unordered one seems to be faster lookup in general but doesn't guarantee the order or time needed
 - there's also tuple that stores or combine multiple types in one object
-- tuple used when returning multiple values from a function or any one time use data groupin
+- tuple used when returning multiple values from a function or any one time use data grouping
+- next : mini-projects implementing stl containers
