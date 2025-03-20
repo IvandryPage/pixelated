@@ -67,3 +67,22 @@
   - etc
 - By using strrchr, we can find the first occurence of character in a string
 - All of this would be handy when it combine to something like std::transform, etc
+
+### 🚀 Memory Leaks
+
+- If a heap memory is changed the pointer without delete[] the heap first, it causes memory leaks
+- This is bad because we don't want "unexpected" high memory usage in our program
+
+### 🚀 Lambda function
+
+- we can create function like we create variable using []()=>data_type_return{}
+- this unlock the possibility to passing function as a parameter
+- this is also useful when we only need a small function, but we must be careful cause I think this could reduce
+  readability
+
+### 🚀 Template function
+
+- template function used when we need the same code but expected a multiple return value
+- instead of overloading function with each data type
+- we could just say template <typename T> then return T as the data_type. This would make our life easier
+- if we need a specific data type should be handled differently, we could implement template specialization
