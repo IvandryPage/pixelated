@@ -1,6 +1,6 @@
 # Compiler and flags
 CXX = g++
-CXXFLAGS = -std=c++17 -Wall -Iinclude
+CXXFLAGS = -std=c++23 -Wall -Iinclude
 
 # SFML libraries (Linux and Windows)
 SFML_LIBS_LINUX = -lsfml-graphics -lsfml-window -lsfml-system
