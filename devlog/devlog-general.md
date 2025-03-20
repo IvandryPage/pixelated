@@ -86,3 +86,11 @@
 - instead of overloading function with each data type
 - we could just say template <typename T> then return T as the data_type. This would make our life easier
 - if we need a specific data type should be handled differently, we could implement template specialization
+
+### 🚀 SFML Shapes
+
+- Learn how shapes are created and drawn to the RenderWindow
+- Spawning shapes based on "cursor" circle shape
+- Real time input using sf::Keybaord::isKeyPressed()
+- Can't spawn shapes with some lifespan or spawning (bullet?)
+- Need to remember the parameter used in every constructor of shapes
