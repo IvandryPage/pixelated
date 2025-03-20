@@ -94,3 +94,13 @@
 - Real time input using sf::Keybaord::isKeyPressed()
 - Can't spawn shapes with some lifespan or spawning (bullet?)
 - Need to remember the parameter used in every constructor of shapes
+
+### 🚀 STL (Standard Template Library) Containers C++
+
+- There are many containers in standar library, I learned that there mainly 3
+  1. Key-Pairs Container => map and unordered-map
+  2. In Out Behaviour => stack, queue, priority_queue
+  3. Unique elements => set and unordered-set
+- Unordered one seems to be faster lookup in general but doesn't guarantee the order or time needed
+- there's also tuple that stores or combine multiple types in one object
+- tuple used when returning multiple values from a function or any one time use data groupin
