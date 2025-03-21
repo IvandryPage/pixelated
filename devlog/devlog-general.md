@@ -112,3 +112,10 @@
 - learn about std::optional for make parameter optional
 - issues a lot need to be fix or implemented, but I focus on how to use std::map and other STL containers, so it's enough
 - It's hard to track std::tuple because std::get doesn't have "semantic" way
+
+### 🚀 SFML Mouse Input
+
+- Learn how to handles mouse button events
+- Displaying "particles" shapes
+- Know that getGlobalBounds contains needs mapPixeltoCoords for better precision mouse input
+- Using remove_if function to remove items from list
