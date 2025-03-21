@@ -105,3 +105,10 @@
 - there's also tuple that stores or combine multiple types in one object
 - tuple used when returning multiple values from a function or any one time use data grouping
 - next : mini-projects implementing stl containers
+
+### 🚀 Student Database
+
+- Using std::map and std::tuple to store NIM and Mahasiswa
+- learn about std::optional for make parameter optional
+- issues a lot need to be fix or implemented, but I focus on how to use std::map and other STL containers, so it's enough
+- It's hard to track std::tuple because std::get doesn't have "semantic" way
