@@ -8,6 +8,7 @@
 class Mahasiswa {
  public:
   Mahasiswa() = default;
+  ~Mahasiswa() = default;
   Mahasiswa(std::string nama, Date birthday, Address address);
 
   const std::string& name() const;
