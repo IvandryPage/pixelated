@@ -36,5 +36,5 @@ clean:
 	rm -rf $(BUILD_DIR) $(BIN_DIR)
 
 # Run the program
-run: $(TARGET)
+run:
 	./$(TARGET)
