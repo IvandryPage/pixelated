@@ -3,9 +3,9 @@
 void System::addMahasiswa() {
   int key;
   std::string name;
-  std::tuple<short, short, short int> date;
+  std::tuple<short, short, short int> date{};
   std::tuple<std::string, std::string, std::string, std::string, std::string>
-      address;
+      address{};
 
   std::cout << "------ Add Mahasiswa ------\n";
   do {
@@ -23,6 +23,17 @@ void System::addMahasiswa() {
   std::cin >> std::get<0>(date) >> c >> std::get<1>(date) >> c >>
       std::get<2>(date);
 
+  std::cout << "City\t: ";
+  std::cin >> std::get<0>(address);
+  std::cout << "Country\t: ";
+  std::cin >> std::get<1>(address);
+  std::cout << "Street\t: ";
+  std::cin >> std::get<2>(address);
+  std::cout << "Province\t: ";
+  std::cin >> std::get<3>(address);
+  std::cout << "Postal Code\t: ";
+  std::cin >> std::get<4>(address);
+
   database_.emplace(
       key,
       Mahasiswa(name,
@@ -32,12 +43,23 @@ void System::addMahasiswa() {
                         std::get<4>(address))));
 }
 void System::viewMahasiswa() {
+  std::cout << "------ View Mahasiswa ------\n";
   for (auto& m : database_) {
-    std::cout << m.first << " " << m.second.name() << std::endl;
+    std::cout << m.first << " " << m.second.name() << " "
+              << m.second.birthday().toString() << " "
+              << m.second.address().toString() << std::endl;
   }
+  std::cin.ignore();
+  std::cin.get();
 }
-void System::deleteMahasiswa() {}
-void System::updateMahasiswa() {}
+void System::deleteMahasiswa() {
+  std::cout << "------ Delete Mahasiswa ------\n";
+  std::cout << "NIM\t: ";
+  int key;
+  std::cin >> key;
+
+  database_.erase(key);
+}
 
 bool System::validInput() {
   if (std::cin.fail()) {

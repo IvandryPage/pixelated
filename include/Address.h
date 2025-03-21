@@ -21,19 +21,19 @@ struct Address : public Printable {
 
   std::string toString() const override {
     std::string address;
-    if (street) {
+    if (street && !street.value().empty()) {
       address += street.value() + ", ";
     }
 
     address += city + ", ";
 
-    if (province) {
+    if (province && !province.value().empty()) {
       address += province.value() + ", ";
     }
 
     address += country;
 
-    if (postal_code) {
+    if (postal_code && !postal_code.value().empty()) {
       address += " " + postal_code.value();
     }
 

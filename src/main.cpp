@@ -6,19 +6,27 @@
 #include "Mahasiswa.h"
 #include "System.h"
 
-enum MenuEnum { ADD = 1, VIEW, UPDATE, DELETE, EXIT };
+enum MenuEnum { ADD = 1, VIEW, DELETE, EXIT };
+
+void clear() {
+#ifdef __WIN32__
+  system("cls");
+#else
+  system("clear");
+#endif
+}
 
 int main() {
   std::map<int, Mahasiswa> database;
   System system(database);
 
   while (true) {
+    clear();
     std::cout << "-------- Student Management --------\n";
     std::cout << "1. Add new mahasiswa\n";
     std::cout << "2. View Student Details\n";
-    std::cout << "3. Update Student Information\n";
-    std::cout << "4. Delete Student\n";
-    std::cout << "5. Exit\n";
+    std::cout << "3. Delete Student\n";
+    std::cout << "4. Exit\n";
     std::cout << "------------------------------------\n";
     std::cout << "> Type your choice : ";
 
@@ -31,16 +39,12 @@ int main() {
       continue;
     }
 
-    std::cout << "input: " << input << '\n';
     switch (input) {
       case ADD:
         system.addMahasiswa();
         break;
       case VIEW:
         system.viewMahasiswa();
-        break;
-      case UPDATE:
-        system.updateMahasiswa();
         break;
       case DELETE:
         system.deleteMahasiswa();
