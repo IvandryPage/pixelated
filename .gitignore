@@ -46,4 +46,4 @@
 *.app
 
 build/launcher
-build/ojb/*.o
+build/obj/*.o
