@@ -1,13 +1,13 @@
 # Compiler and flags
 CXX = g++
-CXXFLAGS = -std=c++17 -Wall -Iinclude
+CXXFLAGS = -std=c++23 -Wall -Iinclude
 
 # SFML libraries (Linux and Windows)
 SFML_LIBS_LINUX = -lsfml-graphics -lsfml-window -lsfml-system
 SFML_LIBS_WINDOWS = -LC:\SFML\lib -lsfml-graphics -lsfml-window -lsfml-system -LC:\mingw64\lib
 
 # Source files and output
-SRC = $(wildcard src/*.cpp)
+SRC = $(wildcard src/*.cpp src/*.hpp)
 OBJ = $(patsubst src/%.cpp, build/obj/%.o, $(SRC))
 
 # Detect OS
@@ -37,6 +37,11 @@ build/obj/%.o: src/%.cpp
 # Run the executable
 run: $(TARGET)
 	./$(TARGET)
+
+$(DEBUG): $(OBJ)
+	$(CXX) -g $(CXXFLAGS) $^ -O $@ $(SFML_LIBS)
+
+debug: $(DEBUG)
 
 # Clean build files
 clean:
