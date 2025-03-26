@@ -44,7 +44,7 @@ class Entity {
 
  private:
   using ComponentTuple =
-      std::tuple<Transform, Shape, LifeSpan, Collision, Input, Score>;
+      std::tuple<Transform, Shape, LifeSpan, Collision, Input, Score, TextDraw>;
   ComponentTuple components_;
   size_t id_{0};
   bool is_alive_{true};

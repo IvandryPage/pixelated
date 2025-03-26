@@ -61,3 +61,12 @@ struct Score : public Component {
   Score() = default;
   Score(int score) : score(score) {}
 };
+
+struct TextDraw : public Component {
+  std::optional<sf::Text> text;
+
+  TextDraw() = default;
+  TextDraw(const sf::Font& font, const std::string& content, int font_size) {
+    text.emplace(font, content, font_size);
+  }
+};

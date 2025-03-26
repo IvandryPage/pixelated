@@ -25,6 +25,9 @@ struct Vec2 {
   }
 
   Vec2<T> operator*(T scale) { return Vec2<T>(x * scale, y * scale); }
+  Vec2<T> operator*(const Vec2<T>& rhs) {
+    return Vec2<T>(x * rhs.x, y * rhs.y);
+  }
 
   Vec2<T> operator/(T scale) {
     if (scale == 0) throw std::runtime_error("Division by zero!\n");

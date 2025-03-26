@@ -32,6 +32,8 @@ class EntityManager {
     removeDeadEntities();
   }
 
+  size_t totalEntities() { return total_entities_; }
+
  private:
   EntityVec entities_;
   EntityVec entities_to_add_;
