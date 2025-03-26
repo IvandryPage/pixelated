@@ -194,7 +194,7 @@ void Game::spawnPlayer() {
   auto player1 = entity_manager_.addEntity("player");
   player1->add<Input>();
   player1->add<Transform>(Vec2<float>(100.0f, window_.getSize().y / 2.0f),
-                          Vec2<float>(500.0f, 500.0f));
+                          Vec2<float>(800.0f, 800.0f));
   player1->add<Shape>(50.0f, rand() % 8 + 3, sf::Color::Blue, sf::Color::White,
                       2.0f);
   player1->add<Collision>(50.0f);
@@ -207,7 +207,7 @@ void Game::spawnPlayer() {
   player2->add<Input>();
   player2->add<Transform>(
       Vec2<float>(window_.getSize().x - 100.0f, window_.getSize().y / 2.0f),
-      Vec2<float>(500.0f, 500.0f));
+      Vec2<float>(800.0f, 800.0f));
   player2->add<Shape>(50.0f, rand() % 3 + 4, sf::Color::Red, sf::Color::White,
                       2.0f);
   player2->add<Collision>(50.0f);
