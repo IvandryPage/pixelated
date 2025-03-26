@@ -16,35 +16,40 @@ struct Vec2 {
   bool operator==(const Vec2<T>& rhs) const { return x == rhs.x && y == rhs.y; }
   bool operator!=(const Vec2<T>& rhs) const { return !(*this == rhs); }
 
+  Vec2<T> operator+(const Vec2<T>& rhs) {
+    return Vec2<T>(x + rhs.x, y + rhs.y);
+  }
+
+  Vec2<T> operator-(const Vec2<T>& rhs) {
+    return Vec2<T>(x - rhs.x, y - rhs.y);
+  }
+
+  Vec2<T> operator*(T scale) { return Vec2<T>(x * scale, y * scale); }
+
+  Vec2<T> operator/(T scale) {
+    if (scale == 0) throw std::runtime_error("Division by zero!\n");
+    return Vec2<T>(x / scale, y / scale);
+  }
+
   Vec2<T> operator+=(const Vec2<T>& rhs) {
-    x += rhs.x;
-    y += rhs.y;
+    *this = *this + rhs;
     return *this;
   }
 
   Vec2<T> operator-=(const Vec2<T>& rhs) {
-    x -= rhs.x;
-    y -= rhs.y;
+    *this = *this - rhs;
     return *this;
   }
 
   Vec2<T> operator*=(T scale) {
-    x *= scale;
-    y *= scale;
+    *this = *this * scale;
     return *this;
   }
 
   Vec2<T> operator/=(T scale) {
-    if (scale == 0) throw std::runtime_error("Division by zero");
-    x /= scale;
-    y /= scale;
+    *this = *this * scale;
     return *this;
   }
-
-  Vec2<T> operator+(const Vec2<T>& rhs) { return *this += rhs; }
-  Vec2<T> operator-(const Vec2<T>& rhs) { return *this -= rhs; }
-  Vec2<T> operator*(float scale) { return *this *= scale; }
-  Vec2<T> operator/(float scale) { return *this /= scale; }
 
   T length() const { return std::sqrt(x * x + y * y); }
 

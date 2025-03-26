@@ -22,8 +22,8 @@ struct Shape : public Component {
 };
 
 struct Transform : public Component {
-  Vec2<float> position{0, 0};
-  Vec2<float> velocity{0, 0};
+  Vec2<float> position{0.0f, 0.0f};
+  Vec2<float> velocity{0.0f, 0.0f};
   sf::Angle angle;
 
   Transform() = default;

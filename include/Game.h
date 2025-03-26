@@ -19,8 +19,16 @@ class Game {
   bool is_paused_{false};
   bool is_running_{true};
 
+  std::vector<sf::Text> scores;
+
   void initialize();
   void eventSystem();
   void updateSystem(float delta_time);
   void renderSystem();
+
+  void spawnPlayer();
+  // void spawnBall();
+  void movePlayer(float delta_time);
+  // void updateScore();
+  // void bounceBall();
 };
