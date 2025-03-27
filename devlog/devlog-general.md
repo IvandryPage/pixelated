@@ -119,3 +119,10 @@
 - Displaying "particles" shapes
 - Know that getGlobalBounds contains needs mapPixeltoCoords for better precision mouse input
 - Using remove_if function to remove items from list
+
+### 🚀 AABB Collision
+
+- Learn about the AABB (Axis Aligned Bounding Box) Collision
+- It check collision between entities by calculating the delta of its center position or origin position and find the overlap vector value of it
+- After collision is detected, it should resolve how to handle the collision based on how the physics in our game engine behave.
+- In this experiment, it pushes the moving object to the direction where it comes from by how deep is the overlap vector
