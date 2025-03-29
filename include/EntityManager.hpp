@@ -14,7 +14,14 @@ class EntityManager {
 
   EntityManager() = default;
   EntityVec& getEntities() { return entities_; }
-  EntityVec& getEntities(const std::string& tag) { return entities_map_[tag]; }
+  EntityVec& getEntities(const std::string& tag) {
+    auto entities = entities_map_.find(tag);
+    if (entities != entities_map_.end()) {
+      return entities->second;
+    }
+    static EntityVec empty_vec;
+    return empty_vec;
+  }
 
   std::shared_ptr<Entity> addEntity(const std::string& tag) {
     auto e = std::shared_ptr<Entity>(new Entity(tag, total_entities_++));
